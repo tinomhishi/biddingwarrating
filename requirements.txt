@@ -1,6 +1,4 @@
 Babel==2.6.0
-boto3==1.5.30
-botocore==1.8.44
 dj-database-url==0.4.2
 Django==1.11.10
 django-bootstrap-form==3.3
@@ -21,8 +19,6 @@ jmespath==0.9.3
 mock==2.0.0
 pbr==3.1.1
 phonenumbers==8.9.4
-Pillow==5.0.0
-pkg-resources==0.0.0
 psycopg2==2.7.4
 python-dateutil==2.6.1
 python-http-client==3.0.0
