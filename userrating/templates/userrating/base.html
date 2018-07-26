@@ -47,10 +47,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <p>
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="{% url 'userrating:index' %}">Payments Home<span class="sr-only">(current)</span></a></li>
-           <li><a href="{ url 'paynow:paynow_payment' %}">New Payment</a></li>
-            <li><a href="{ url 'paynow:confirmed_payments' %}">Confirmed Payments</a></li>
-            <li><a href="{ url 'paynow:unconfirmed_payments' %}">Unconfirmed Payments</a></li>
+            <li class="active"><a href="{% url 'userrating:index' %}">User Ratings Home<span class="sr-only">(current)</span></a></li>
+           <li><a href="{% url 'userrating:sales' %}">Sales</a></li>
+            <li><a href="{% url 'userrating:purchases' %}">Purchases</a></li>
           </ul>
           </p>
           {% block cashier_side_menu %}{% endblock %}
