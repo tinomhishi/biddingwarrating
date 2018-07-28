@@ -14,6 +14,9 @@ class ItemSale(models.Model):
 
     class Meta:
         ordering = ['-created']
+    
+    def __str__(self):
+      return self.title        
 
 
 class UserReview(models.Model):

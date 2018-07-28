@@ -17,6 +17,17 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'userrating/css/dashboard.css' %}" />
+    <script src="{% static 'userrating/js/jquery.min.js' %}"></script>
+    <script type="text/javascript">
+    jQuery('#edit_form').hide();
+    </script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('#hideshow').on('click', function(event) {        
+             jQuery('#edit_form').toggle('show');
+        });
+    });
+    </script>
 
 </head>
 

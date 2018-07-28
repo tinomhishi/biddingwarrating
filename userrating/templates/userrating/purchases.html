@@ -6,7 +6,7 @@
 <h1> My Purchases</h1>
 <ul>
 {% for purchase in purchases %}
-<li><a href="">{{ purchase.title }}</a></li>
+<li><a href="{% url 'userrating:purchase_detail' pk=purchase.pk%}">{{ purchase.title }}</a></li>
 
 {% endfor %}
 </ul>

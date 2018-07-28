@@ -1,0 +1,35 @@
+{% extends "userrating/base.html" %}
+
+{% block title %}{{ purchase.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h1>{{ purchase.title }}</h1>
+	<p>SELLER: {{purchase.seller}}</p>
+	<p>DATE: {{purchase.created}}</p>
+
+
+{% if not review and show %}
+	<h3>Add Review</h3>	
+	<div class="reviewform">
+		<form action="." method="post">
+			{% csrf_token %}
+		    {{ form.as_p }}
+		    <button class="btn btn-info" type="submit">Submit Review</button>
+		</form> 
+	</div>
+{% elif review and show %}
+	<p>Rating: {{ review.rating }} stars</p>
+	<input type='button' id='hideshow' value='Edit Rating' class="btn btn-info">
+	<div id="edit_form">
+		<div class="reviewform">
+			<form action="." method="post">
+				{% csrf_token %}
+			    {{ edit_form.as_p }}
+			    <button class="btn btn-info" type="submit">Submit Review</button>
+			</form>
+		</div>
+	</div>	 	   
+{% endif %}
+	</div>	
+{% endblock %}
