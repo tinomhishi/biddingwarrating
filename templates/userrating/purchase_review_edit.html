@@ -1,0 +1,16 @@
+{% extends "userrating/base.html" %}
+
+{% block title %}{{ purchase.title }}{% endblock %}
+
+{% block content %}
+<h1>Edit Review</h1>
+
+<div class="reviewform">
+	<form action="." method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button class="btn btn-info" type="submit">Save</button>
+	</form>
+</div>
+
+{% endblock %}	

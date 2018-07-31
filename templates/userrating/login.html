@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="charlek" >
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Login - UserRating System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'userrating/css/bootstrap.min.css' %}" />
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'userrating/css/signin.css' %}" />
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+	<p>Your username and password didn't match. Please try again.</p>
+	</div>
+{% endif %}
+        <h1 class="page-header">User Rating</h1>
+	<p>
+	
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+	</p>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'userrating/js/jquery.min.js' %}"></script>
+    <script src="{% static 'userrating/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

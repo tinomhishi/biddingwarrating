@@ -1,0 +1,14 @@
+{% extends "userrating/base.html" %}
+
+{% block title %}User Sales{% endblock %}
+
+{% block content %}
+<h1> My Sales</h1>
+
+<ul>
+{% for sale in sales %}
+<li><a href="{% url 'userrating:sale_detail' pk=sale.pk%}">{{ sale.title }}</a></li>
+
+{% endfor %}
+</ul>
+{% endblock %}
